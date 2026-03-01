@@ -1,0 +1,1203 @@
+{
+    "AAPL": {
+        "name": "Apple Inc.",
+        "chinese_name": "蘋果公司",
+        "icon": "icon/AAPL.png",
+        "description": "全球最大的科技公司之一，主要產品包括 iPhone、iPad、Mac 等。公司專注於設計、開發和銷售消費電子產品、軟件和服務。",
+        "sector": "科技",
+        "industry": "消費電子",
+        "founded": "1976年4月1日",
+        "ipo_date": "1980-12-12",
+        "headquarters": "加利福尼亞州庫比蒂諾",
+        "ceo": "Tim Cook",
+        "employees": "164,000+",
+        "key_products": [
+            "iPhone",
+            "iPad",
+            "Mac",
+            "Apple Watch",
+            "AirPods"
+        ],
+        "key_services": [
+            "App Store",
+            "Apple Music",
+            "iCloud",
+            "Apple TV+"
+        ]
+    },
+    "MSFT": {
+        "name": "Microsoft Corporation",
+        "chinese_name": "微軟",
+        "icon": "icon/MSFT.png",
+        "description": "全球最大的軟件公司之一，提供個人電腦操作系統、辦公軟件、雲計算服務等。近年來在人工智能和雲計算領域有重大突破。",
+        "sector": "科技",
+        "industry": "軟件",
+        "founded": "1975年4月4日",
+        "ipo_date": "1986-03-13",
+        "headquarters": "華盛頓州雷德蒙德",
+        "ceo": "Satya Nadella",
+        "employees": "221,000+",
+        "key_products": [
+            "Windows",
+            "Office 365",
+            "Xbox"
+        ],
+        "key_services": [
+            "Azure",
+            "LinkedIn",
+            "GitHub"
+        ]
+    },
+    "GOOGL": {
+        "name": "Alphabet Inc. (Google)",
+        "chinese_name": "谷歌",
+        "icon": "icon/GOOGL.png",
+        "description": "全球最大的搜索引擎和網絡廣告公司，同時在人工智能、自動駕駛等領域有重要布局。旗下擁有 YouTube、Android 等重要產品。",
+        "sector": "科技",
+        "industry": "互聯網服務",
+        "founded": "1998年9月4日",
+        "ipo_date": "2004-08-19",
+        "headquarters": "加利福尼亞州山景城",
+        "ceo": "Sundar Pichai",
+        "employees": "156,000+",
+        "key_products": [
+            "Google Search",
+            "Android",
+            "Chrome"
+        ],
+        "key_services": [
+            "Google Cloud",
+            "YouTube",
+            "Google Maps"
+        ]
+    },
+    "AMZN": {
+        "name": "Amazon.com Inc.",
+        "chinese_name": "亞馬遜",
+        "icon": "icon/AMZN.png",
+        "description": "全球最大的電子商務公司，同時也是雲計算服務的領導者。公司不斷擴展業務範圍，包括人工智能、數字娛樂等領域。",
+        "sector": "消費者服務",
+        "industry": "電子商務",
+        "founded": "1994年7月5日",
+        "ipo_date": "1997-05-15",
+        "headquarters": "華盛頓州西雅圖",
+        "ceo": "Andy Jassy",
+        "employees": "1,600,000+",
+        "key_products": [
+            "Amazon Prime",
+            "Kindle",
+            "Echo"
+        ],
+        "key_services": [
+            "AWS",
+            "Prime Video",
+            "Amazon Music"
+        ]
+    },
+    "META": {
+        "name": "Meta Platforms Inc.",
+        "chinese_name": "元宇宙平台",
+        "icon": "icon/META.png",
+        "description": "全球最大的社交媒體公司，擁有 Facebook、Instagram、WhatsApp 等平台。正積極投資元宇宙技術，致力於打造下一代互聯網平台。",
+        "sector": "科技",
+        "industry": "社交媒體",
+        "founded": "2004年2月4日",
+        "ipo_date": "2012-05-18",
+        "headquarters": "加利福尼亞州門洛帕克",
+        "ceo": "Mark Zuckerberg",
+        "employees": "86,000+",
+        "key_products": [
+            "Facebook",
+            "Instagram",
+            "WhatsApp"
+        ],
+        "key_services": [
+            "Meta Quest",
+            "Facebook Messenger",
+            "Workplace"
+        ]
+    },
+    "NVDA": {
+        "name": "NVIDIA Corporation",
+        "chinese_name": "輝達",
+        "icon": "icon/NVDA.png",
+        "description": "全球領先的圖形處理器（GPU）製造商，在人工智能、數據中心、遊戲和自動駕駛等領域具有重要地位。",
+        "sector": "科技",
+        "industry": "半導體",
+        "founded": "1993年4月5日",
+        "ipo_date": "1999-01-22",
+        "headquarters": "加利福尼亞州聖克拉拉",
+        "ceo": "Jensen Huang",
+        "employees": "22,000+",
+        "key_products": [
+            "GeForce",
+            "CUDA",
+            "NVIDIA RTX"
+        ],
+        "key_services": [
+            "NVIDIA AI",
+            "NVIDIA Drive",
+            "GeForce NOW"
+        ]
+    },
+    "TSLA": {
+        "name": "Tesla Inc.",
+        "chinese_name": "特斯拉",
+        "icon": "icon/TSLA.png",
+        "description": "全球最有價值的汽車公司，專注於電動車、可再生能源和自動駕駛技術的開發。引領全球向可持續交通方式轉型。",
+        "sector": "汽車",
+        "industry": "電動車",
+        "founded": "2003年7月1日",
+        "ipo_date": "2010-06-29",
+        "headquarters": "德克薩斯州奧斯汀",
+        "ceo": "Elon Musk",
+        "employees": "127,000+",
+        "key_products": [
+            "Model S",
+            "Model 3",
+            "Model X",
+            "Model Y"
+        ],
+        "key_services": [
+            "Autopilot",
+            "Tesla Energy",
+            "Supercharger Network"
+        ]
+    },
+    "JPM": {
+        "name": "JPMorgan Chase & Co.",
+        "chinese_name": "摩根大通",
+        "icon": "icon/JPM.png",
+        "description": "全球最大的銀行之一，提供投資銀行、商業銀行、資產管理等全方位金融服務。在金融科技領域持續創新。",
+        "sector": "金融",
+        "industry": "銀行",
+        "founded": "1799年12月1日",
+        "ipo_date": "1969-03-18",
+        "headquarters": "紐約市",
+        "ceo": "Jamie Dimon",
+        "employees": "256,000+",
+        "key_products": [
+            "Chase Banking",
+            "Credit Cards"
+        ],
+        "key_services": [
+            "Investment Banking",
+            "Asset Management",
+            "Treasury Services"
+        ]
+    },
+    "V": {
+        "name": "Visa Inc.",
+        "chinese_name": "維薩",
+        "icon": "icon/V.png",
+        "description": "全球最大的支付技術公司之一，提供電子支付解決方案。持續創新支付技術，推動無現金社會發展。",
+        "sector": "金融",
+        "industry": "支付服務",
+        "founded": "1958年9月18日",
+        "ipo_date": "2008-03-19",
+        "headquarters": "加利福尼亞州福斯特城",
+        "ceo": "Ryan McInerney",
+        "employees": "26,500+",
+        "key_products": [
+            "Visa Credit",
+            "Visa Debit"
+        ],
+        "key_services": [
+            "VisaNet",
+            "Visa Direct",
+            "Visa Token Service"
+        ]
+    },
+    "WMT": {
+        "name": "Walmart Inc.",
+        "chinese_name": "沃爾瑪",
+        "icon": "icon/WMT.png",
+        "description": "全球最大的零售商，經營超市、會員制倉儲店等。近年來大力發展電子商務，與亞馬遜展開競爭。",
+        "sector": "消費者服務",
+        "industry": "零售",
+        "founded": "1962年7月2日",
+        "ipo_date": "1970-08-25",
+        "headquarters": "阿肯色州本頓維爾",
+        "ceo": "Doug McMillon",
+        "employees": "2,300,000+",
+        "key_products": [
+            "Walmart Supercenter",
+            "Sam's Club"
+        ],
+        "key_services": [
+            "Walmart+",
+            "Walmart eCommerce",
+            "Walmart Pay"
+        ]
+    },
+    "PG": {
+        "name": "The Procter & Gamble Company",
+        "chinese_name": "寶潔",
+        "icon": "icon/PG.png",
+        "description": "全球最大的消費品公司，提供個人護理、家庭護理和美容產品。",
+        "sector": "消費品",
+        "industry": "日用品",
+        "founded": "1837年10月31日",
+        "ipo_date": "1929-01-02",
+        "headquarters": "俄亥俄州辛辛那提",
+        "ceo": "Jon Moeller",
+        "employees": "97,000+",
+        "key_products": [
+            "Pampers",
+            "Tide",
+            "Gillette"
+        ],
+        "key_services": [
+            "Consumer Goods",
+            "Personal Care",
+            "Home Care"
+        ]
+    },
+    "JNJ": {
+        "name": "Johnson & Johnson",
+        "chinese_name": "強生",
+        "icon": "icon/JNJ.png",
+        "description": "全球最大的醫療保健公司，提供醫療設備、藥品和消費保健產品。",
+        "sector": "醫療保健",
+        "industry": "醫療設備",
+        "founded": "1886年1月1日",
+        "ipo_date": "1944-09-24",
+        "headquarters": "新澤西州新布朗斯維克",
+        "ceo": "Joaquin Duato",
+        "employees": "152,000+",
+        "key_products": [
+            "Band-Aid",
+            "Tylenol",
+            "Neutrogena"
+        ],
+        "key_services": [
+            "Medical Devices",
+            "Pharmaceuticals",
+            "Consumer Healthcare"
+        ]
+    },
+    "KO": {
+        "name": "The Coca-Cola Company",
+        "chinese_name": "可口可樂",
+        "icon": "icon/KO.png",
+        "description": "全球最大的飲料公司，提供碳酸飲料、果汁和茶飲料。",
+        "sector": "消費品",
+        "industry": "飲料",
+        "founded": "1886年5月8日",
+        "ipo_date": "1919-09-05",
+        "headquarters": "喬治亞州亞特蘭大",
+        "ceo": "James Quincey",
+        "employees": "79,000+",
+        "key_products": [
+            "Coca-Cola",
+            "Sprite",
+            "Fanta"
+        ],
+        "key_services": [
+            "Beverages",
+            "Bottling",
+            "Distribution"
+        ]
+    },
+    "PFE": {
+        "name": "Pfizer Inc.",
+        "chinese_name": "輝瑞",
+        "icon": "icon/PFE.png",
+        "description": "全球領先的製藥公司，專注於研發和生產處方藥和疫苗。",
+        "sector": "醫療保健",
+        "industry": "製藥",
+        "founded": "1849年",
+        "ipo_date": "1942-06-22",
+        "headquarters": "紐約市",
+        "ceo": "Albert Bourla",
+        "employees": "79,000+",
+        "key_products": [
+            "Lipitor",
+            "Viagra",
+            "COVID-19 Vaccine"
+        ],
+        "key_services": [
+            "Pharmaceuticals",
+            "Vaccines",
+            "Research"
+        ]
+    },
+    "HD": {
+        "name": "The Home Depot, Inc.",
+        "chinese_name": "家得寶",
+        "icon": "icon/HD.png",
+        "description": "全球最大的家居建材零售商，提供建築材料和家居裝修服務。",
+        "sector": "零售",
+        "industry": "家居建材",
+        "founded": "1978年",
+        "ipo_date": "1981-09-22",
+        "headquarters": "喬治亞州亞特蘭大",
+        "ceo": "Ted Decker",
+        "employees": "500,000+",
+        "key_products": [
+            "Building Materials",
+            "Home Improvement"
+        ],
+        "key_services": [
+            "Installation Services",
+            "Tool Rental",
+            "Pro Services"
+        ]
+    },
+    "DIS": {
+        "name": "The Walt Disney Company",
+        "chinese_name": "迪士尼",
+        "icon": "icon/DIS.png",
+        "description": "全球最大的娛樂公司，提供電影、電視、主題樂園和串流媒體服務。",
+        "sector": "通訊服務",
+        "industry": "娛樂",
+        "founded": "1923年10月16日",
+        "ipo_date": "1957-11-12",
+        "headquarters": "加利福尼亞州伯班克",
+        "ceo": "Bob Iger",
+        "employees": "220,000+",
+        "key_products": [
+            "Disney+",
+            "Theme Parks"
+        ],
+        "key_services": [
+            "Entertainment",
+            "Media",
+            "Streaming"
+        ]
+    },
+    "NFLX": {
+        "name": "Netflix, Inc.",
+        "chinese_name": "Netflix",
+        "icon": "icon/NFLX.png",
+        "description": "全球領先的串流媒體服務提供商，提供原創節目和電影。",
+        "sector": "通訊服務",
+        "industry": "串流媒體",
+        "founded": "1997年8月29日",
+        "ipo_date": "2002-05-23",
+        "headquarters": "加利福尼亞州洛斯加托斯",
+        "ceo": "Ted Sarandos",
+        "employees": "12,800+",
+        "key_products": [
+            "Streaming Service"
+        ],
+        "key_services": [
+            "Content Production",
+            "Streaming",
+            "DVD Rental"
+        ]
+    },
+    "INTC": {
+        "name": "Intel Corporation",
+        "chinese_name": "英特爾",
+        "icon": "icon/INTC.png",
+        "description": "全球最大的半導體公司，專注於處理器和晶片製造。",
+        "sector": "科技",
+        "industry": "半導體",
+        "founded": "1968年7月18日",
+        "ipo_date": "1971-10-13",
+        "headquarters": "加利福尼亞州聖克拉拉",
+        "ceo": "Pat Gelsinger",
+        "employees": "131,900+",
+        "key_products": [
+            "Intel Core",
+            "Intel Xeon"
+        ],
+        "key_services": [
+            "Semiconductor Manufacturing",
+            "Research"
+        ]
+    },
+    "CSCO": {
+        "name": "Cisco Systems, Inc.",
+        "chinese_name": "思科",
+        "icon": "icon/CSCO.png",
+        "description": "全球領先的網路設備和解決方案提供商，專注於企業網路和資安。",
+        "sector": "科技",
+        "industry": "網路設備",
+        "founded": "1984年12月10日",
+        "ipo_date": "1990-02-16",
+        "headquarters": "加利福尼亞州聖荷西",
+        "ceo": "Chuck Robbins",
+        "employees": "83,300+",
+        "key_products": [
+            "Networking Hardware",
+            "Security"
+        ],
+        "key_services": [
+            "Network Solutions",
+            "Cybersecurity",
+            "Cloud Services"
+        ]
+    },
+    "PEP": {
+        "name": "PepsiCo, Inc.",
+        "chinese_name": "百事公司",
+        "icon": "icon/PEP.png",
+        "description": "全球最大的食品和飲料公司之一，提供碳酸飲料、零食和食品。",
+        "sector": "消費品",
+        "industry": "食品和飲料",
+        "founded": "1965年",
+        "ipo_date": "1919-12-24",
+        "headquarters": "紐約州珀切斯",
+        "ceo": "Ramon Laguarta",
+        "employees": "309,000+",
+        "key_products": [
+            "Pepsi",
+            "Lay's",
+            "Gatorade"
+        ],
+        "key_services": [
+            "Beverages",
+            "Snacks",
+            "Food"
+        ]
+    },
+    "UNH": {
+        "name": "UnitedHealth Group Incorporated",
+        "chinese_name": "聯合健康保險",
+        "icon": "icon/UNH.png",
+        "description": "全球最大的醫療保險公司，提供醫療保健服務和保險。",
+        "sector": "醫療保健",
+        "industry": "健康保險",
+        "founded": "1977年",
+        "ipo_date": "1984-10-04",
+        "headquarters": "明尼蘇達州明尼頓卡",
+        "ceo": "Andrew Witty",
+        "employees": "400,000+",
+        "key_products": [
+            "Health Insurance",
+            "Pharmacy Benefits"
+        ],
+        "key_services": [
+            "Healthcare Services",
+            "Information and Technology-Enabled Services"
+        ]
+    },
+    "XOM": {
+        "name": "Exxon Mobil Corporation",
+        "chinese_name": "埃克森美孚",
+        "icon": "icon/XOM.png",
+        "description": "全球最大的石油和天然氣公司之一，從事石油和天然氣的勘探、生產、煉油和銷售。",
+        "sector": "能源",
+        "industry": "石油和天然氣",
+        "founded": "1870年",
+        "ipo_date": "1918-04-30",
+        "headquarters": "德克薩斯州歐文",
+        "ceo": "Darren W. Woods",
+        "employees": "63,000+",
+        "key_products": [
+            "Crude Oil",
+            "Natural Gas",
+            "Petroleum Products"
+        ],
+        "key_services": [
+            "Exploration",
+            "Production",
+            "Refining",
+            "Marketing"
+        ]
+    },
+    "MA": {
+        "name": "Mastercard Incorporated",
+        "chinese_name": "萬事達卡",
+        "icon": "icon/MA.png",
+        "description": "全球領先的支付科技公司，連接全球消費者、金融機構、商家和政府。",
+        "sector": "金融",
+        "industry": "支付服務",
+        "founded": "1966年",
+        "ipo_date": "2006-05-25",
+        "headquarters": "紐約州珀切斯",
+        "ceo": "Michael Miebach",
+        "employees": "24,000+",
+        "key_products": [
+            "Credit Cards",
+            "Debit Cards"
+        ],
+        "key_services": [
+            "Payment Processing",
+            "Cyber and Intelligence Solutions"
+        ]
+    },
+    "CRM": {
+        "name": "Salesforce Inc.",
+        "chinese_name": "賽富時",
+        "icon": "icon/CRM.png",
+        "description": "全球領先的客戶關係管理 (CRM) 軟件供應商，提供雲端服務。",
+        "sector": "科技",
+        "industry": "軟件",
+        "founded": "1999年",
+        "ipo_date": "2004-06-23",
+        "headquarters": "加利福尼亞州舊金山",
+        "ceo": "Marc Benioff",
+        "employees": "73,500+",
+        "key_products": [
+            "Sales Cloud",
+            "Service Cloud",
+            "Marketing Cloud"
+        ],
+        "key_services": [
+            "Customer Relationship Management",
+            "Cloud Computing"
+        ]
+    },
+    "PYPL": {
+        "name": "PayPal Holdings Inc.",
+        "chinese_name": "貝寶",
+        "icon": "icon/PYPL.png",
+        "description": "全球領先的在線支付系統，為全球數百萬用戶提供安全便捷的支付服務。",
+        "sector": "金融",
+        "industry": "支付服務",
+        "founded": "1998年12月",
+        "ipo_date": "2002-02-15",
+        "headquarters": "加利福尼亞州聖荷西",
+        "ceo": "Alex Chriss",
+        "employees": "30,900+",
+        "key_products": [
+            "PayPal",
+            "Venmo"
+        ],
+        "key_services": [
+            "Online Payment Processing",
+            "Mobile Payments"
+        ]
+    },
+    "ABBV": {
+        "name": "AbbVie Inc.",
+        "chinese_name": "艾伯維",
+        "icon": "icon/ABBV.png",
+        "description": "一家全球性的生物製藥公司，專注於研發和商業化創新型藥物。",
+        "sector": "醫療保健",
+        "industry": "製藥",
+        "founded": "2013年1月1日",
+        "ipo_date": "2013-01-02",
+        "headquarters": "伊利諾伊州北芝加哥",
+        "ceo": "Richard A. Gonzalez",
+        "employees": "50,000+",
+        "key_products": [
+            "Humira",
+            "Imbruvica",
+            "Skyrizi"
+        ],
+        "key_services": [
+            "Pharmaceuticals",
+            "Biotechnology",
+            "Research"
+        ]
+    },
+    "NKE": {
+        "name": "Nike, Inc.",
+        "chinese_name": "耐吉",
+        "icon": "icon/NKE.png",
+        "description": "全球領先的運動服裝和鞋類製造商，為全球運動員提供創新產品和體驗。",
+        "sector": "消費者服務",
+        "industry": "服裝",
+        "founded": "1964年1月25日",
+        "ipo_date": "1980-12-02",
+        "headquarters": "俄勒岡州比弗頓",
+        "ceo": "John Donahoe",
+        "employees": "79,100+",
+        "key_products": [
+            "Shoes",
+            "Apparel",
+            "Equipment"
+        ],
+        "key_services": [
+            "Retail",
+            "Wholesale",
+            "eCommerce"
+        ]
+    },
+    "LLY": {
+        "name": "Eli Lilly and Company",
+        "chinese_name": "禮來公司",
+        "icon": "icon/LLY.png",
+        "description": "一家全球領先的製藥公司，致力於發現和開發改變人類健康狀況的藥物。",
+        "sector": "醫療保健",
+        "industry": "製藥",
+        "founded": "1876年5月10日",
+        "ipo_date": "1927-06-11",
+        "headquarters": "印第安納州印第安納波利斯",
+        "ceo": "David A. Ricks",
+        "employees": "43,000+",
+        "key_products": [
+            "Trulicity",
+            "Mounjaro",
+            "Olumiant"
+        ],
+        "key_services": [
+            "Pharmaceuticals",
+            "Research",
+            "Biotechnology"
+        ]
+    },
+    "MRK": {
+        "name": "Merck & Co., Inc.",
+        "chinese_name": "默克公司",
+        "icon": "icon/MRK.png",
+        "description": "全球領先的製藥公司之一，研發並生產多種藥品和疫苗。",
+        "sector": "醫療保健",
+        "industry": "製藥",
+        "founded": "1891年",
+        "ipo_date": "1970-06-01",
+        "headquarters": "紐澤西州肯尼沃斯",
+        "ceo": "Robert M. Davis",
+        "employees": "69,000+",
+        "key_products": [
+            "Keytruda",
+            "Gardasil",
+            "Januvia"
+        ],
+        "key_services": [
+            "Pharmaceuticals",
+            "Vaccines",
+            "Animal Health"
+        ]
+    },
+    "MCD": {
+        "name": "McDonald's Corporation",
+        "chinese_name": "麥當勞",
+        "icon": "icon/MCD.png",
+        "description": "全球最大的連鎖快餐店之一，以漢堡和薯條聞名。",
+        "sector": "消費者服務",
+        "industry": "餐飲",
+        "founded": "1955年4月15日",
+        "ipo_date": "1965-04-21",
+        "headquarters": "伊利諾伊州芝加哥",
+        "ceo": "Chris Kempczinski",
+        "employees": "200,000+",
+        "key_products": [
+            "Big Mac",
+            "Fries",
+            "McNuggets"
+        ],
+        "key_services": [
+            "Restaurants",
+            "Franchising",
+            "Delivery"
+        ]
+    },
+    "T": {
+        "name": "AT&T Inc.",
+        "chinese_name": "美國電話電報公司",
+        "icon": "icon/T.png",
+        "description": "全球領先的電信公司，提供無線通信、互聯網和電視服務。",
+        "sector": "通訊服務",
+        "industry": "電信",
+        "founded": "1885年",
+        "ipo_date": "1984-01-01",
+        "headquarters": "德克薩斯州達拉斯",
+        "ceo": "John T. Stankey",
+        "employees": "150,000+",
+        "key_products": [
+            "Wireless Services",
+            "Internet Services",
+            "Television"
+        ],
+        "key_services": [
+            "Telecommunications",
+            "Media",
+            "Technology"
+        ]
+    },
+    "VZ": {
+        "name": "Verizon Communications Inc.",
+        "chinese_name": "威訊通訊",
+        "icon": "icon/VZ.png",
+        "description": "全球最大的電信公司之一，提供無線通訊、互聯網和電視服務。",
+        "sector": "通訊服務",
+        "industry": "電信",
+        "founded": "2000年",
+        "ipo_date": "2000-07-03",
+        "headquarters": "紐澤西州巴斯金嶺",
+        "ceo": "Hans Vestberg",
+        "employees": "118,400+",
+        "key_products": [
+            "Wireless Services",
+            "Internet Services",
+            "Television"
+        ],
+        "key_services": [
+            "Telecommunications",
+            "Media",
+            "Technology"
+        ]
+    },
+    "GS": {
+        "name": "The Goldman Sachs Group, Inc.",
+        "chinese_name": "高盛集團",
+        "icon": "icon/GS.png",
+        "description": "全球領先的投資銀行、證券和投資管理公司。",
+        "sector": "金融",
+        "industry": "投資銀行",
+        "founded": "1869年",
+        "ipo_date": "1999-05-04",
+        "headquarters": "紐約市",
+        "ceo": "David M. Solomon",
+        "employees": "49,200+",
+        "key_products": [
+            "Investment Banking",
+            "Asset Management"
+        ],
+        "key_services": [
+            "Financial Advisory",
+            "Trading",
+            "Underwriting"
+        ]
+    },
+    "BA": {
+        "name": "The Boeing Company",
+        "chinese_name": "波音公司",
+        "icon": "icon/BA.png",
+        "description": "全球領先的航空航天公司，製造民用和軍用飛機。",
+        "sector": "工業",
+        "industry": "航空航天",
+        "founded": "1916年7月15日",
+        "ipo_date": "1929-07-26",
+        "headquarters": "伊利諾伊州芝加哥",
+        "ceo": "David L. Calhoun",
+        "employees": "140,000+",
+        "key_products": [
+            "Commercial Airplanes",
+            "Defense Systems"
+        ],
+        "key_services": [
+            "Aircraft Manufacturing",
+            "Aerospace Services"
+        ]
+    },
+    "CAT": {
+        "name": "Caterpillar Inc.",
+        "chinese_name": "卡特彼勒",
+        "icon": "icon/CAT.png",
+        "description": "全球領先的建築和採礦設備製造商。",
+        "sector": "工業",
+        "industry": "重型機械",
+        "founded": "1925年4月15日",
+        "ipo_date": "1929-06-01",
+        "headquarters": "伊利諾伊州迪爾菲爾德",
+        "ceo": "Jim Umpleby",
+        "employees": "109,100+",
+        "key_products": [
+            "Construction Equipment",
+            "Mining Equipment"
+        ],
+        "key_services": [
+            "Manufacturing",
+            "Distribution",
+            "Financial Services"
+        ]
+    },
+    "HON": {
+        "name": "Honeywell International Inc.",
+        "chinese_name": "霍尼韋爾",
+        "icon": "icon/HON.png",
+        "description": "一家多元化的技術和製造公司，提供航空航天、建築技術、績效材料和安全解決方案。",
+        "sector": "工業",
+        "industry": "多元化工業",
+        "founded": "1906年",
+        "ipo_date": "1925-04-09",
+        "headquarters": "北卡羅來納州夏洛特",
+        "ceo": "Vimal Kapur",
+        "employees": "99,000+",
+        "key_products": [
+            "Aerospace",
+            "Building Technologies",
+            "Performance Materials"
+        ],
+        "key_services": [
+            "Engineering",
+            "Manufacturing",
+            "Software"
+        ]
+    },
+    "CVX": {
+        "name": "Chevron Corporation",
+        "chinese_name": "雪佛龍公司",
+        "icon": "icon/CVX.png",
+        "description": "一家全球領先的能源公司，從事石油、天然氣和地熱能源的勘探、生產、煉油和銷售。",
+        "sector": "能源",
+        "industry": "石油和天然氣",
+        "founded": "1879年",
+        "ipo_date": "1900-01-29",
+        "headquarters": "加利福尼亞州聖拉蒙",
+        "ceo": "Michael K. Wirth",
+        "employees": "42,000+",
+        "key_products": [
+            "Crude Oil",
+            "Natural Gas",
+            "Gasoline"
+        ],
+        "key_services": [
+            "Exploration",
+            "Production",
+            "Refining",
+            "Marketing"
+        ]
+    },
+    "ADBE": {
+        "name": "Adobe Inc.",
+        "chinese_name": "奧多比",
+        "icon": "icon/ADBE.png",
+        "description": "全球領先的數位媒體和數位行銷解決方案供應商。",
+        "sector": "科技",
+        "industry": "軟件",
+        "founded": "1982年",
+        "ipo_date": "1986-08-20",
+        "headquarters": "加利福尼亞州聖荷西",
+        "ceo": "Shantanu Narayen",
+        "employees": "29,000+",
+        "key_products": [
+            "Photoshop",
+            "Acrobat",
+            "Illustrator"
+        ],
+        "key_services": [
+            "Creative Cloud",
+            "Document Cloud",
+            "Experience Cloud"
+        ]
+    },
+    "SPY": {
+        "name": "SPDR S&P 500 ETF Trust",
+        "chinese_name": "SPDR 標普500 指數 ETF",
+        "icon": "icon/SPY.png",
+        "description": "追蹤標準普爾500指數，提供廣泛市場的投資。",
+        "sector": "ETF",
+        "industry": "大型股指數",
+        "founded": "1993年1月22日",
+        "ipo_date": "1993-01-22",
+        "headquarters": "美國波士頓",
+        "ceo": "Cyrus Taraporevala",
+        "employees": "3,000+",
+        "key_products": [
+            "標普500指數追蹤"
+        ],
+        "key_services": [
+            "指數化投資",
+            "被動式管理",
+            "股票投資"
+        ],
+        "category": "大型股",
+        "expense_ratio": "0.0945%",
+        "inception_date": "1993-01-22",
+        "issuer": "State Street Global Advisors",
+        "index": "S&P 500 Index",
+        "holdings": [
+            "Apple Inc.",
+            "Microsoft Corp.",
+            "Amazon.com Inc."
+        ]
+    },
+    "QQQ": {
+        "name": "Invesco QQQ Trust",
+        "chinese_name": "景順QQQ信託",
+        "icon": "icon/QQQ.png",
+        "description": "追蹤納斯達克100指數，主要投資於科技股。",
+        "sector": "ETF",
+        "industry": "科技指數",
+        "founded": "1999年3月10日",
+        "ipo_date": "1999-03-10",
+        "headquarters": "美國亞特蘭大",
+        "ceo": "Andrew Schlossberg",
+        "employees": "8,500+",
+        "key_products": [
+            "納斯達克100指數追蹤"
+        ],
+        "key_services": [
+            "指數化投資",
+            "被動式管理",
+            "科技股投資"
+        ],
+        "category": "科技股",
+        "expense_ratio": "0.20%",
+        "inception_date": "1999-03-10",
+        "issuer": "Invesco",
+        "index": "Nasdaq-100 Index",
+        "holdings": [
+            "Apple Inc.",
+            "Microsoft Corp.",
+            "Amazon.com Inc.",
+            "NVIDIA Corp."
+        ]
+    },
+    "VTI": {
+        "name": "Vanguard Total Stock Market ETF",
+        "chinese_name": "先鋒整體股市 ETF",
+        "icon": "icon/VTI.png",
+        "description": "追蹤美國整體股市，提供廣泛市場的投資。",
+        "sector": "ETF",
+        "industry": "廣泛市場指數",
+        "founded": "2001年5月24日",
+        "ipo_date": "2001-05-24",
+        "headquarters": "美國賓夕法尼亞州馬爾文",
+        "ceo": "Tim Buckley",
+        "employees": "18,800+",
+        "key_products": [
+            "整體市場指數追蹤"
+        ],
+        "key_services": [
+            "指數化投資",
+            "被動式管理",
+            "多元化投資"
+        ],
+        "category": "廣泛市場",
+        "expense_ratio": "0.03%",
+        "inception_date": "2001-05-24",
+        "issuer": "Vanguard",
+        "index": "CRSP US Total Market Index",
+        "holdings": [
+            "Apple Inc.",
+            "Microsoft Corp.",
+            "Amazon.com Inc."
+        ]
+    },
+    "VOO": {
+        "name": "Vanguard S&P 500 ETF",
+        "chinese_name": "先鋒 標普500 指數 ETF",
+        "icon": "icon/VOO.png",
+        "description": "追蹤標準普爾500指數，提供廣泛市場的投資。",
+        "sector": "ETF",
+        "industry": "大型股指數",
+        "founded": "2010年9月7日",
+        "ipo_date": "2010-09-07",
+        "headquarters": "美國賓夕法尼亞州馬爾文",
+        "ceo": "Tim Buckley",
+        "employees": "18,800+",
+        "key_products": [
+            "標普500指數追蹤"
+        ],
+        "key_services": [
+            "指數化投資",
+            "被動式管理",
+            "股票投資"
+        ],
+        "category": "大型股",
+        "expense_ratio": "0.03%",
+        "inception_date": "2010-09-07",
+        "issuer": "Vanguard",
+        "index": "S&P 500 Index",
+        "holdings": [
+            "Apple Inc.",
+            "Microsoft Corp.",
+            "Amazon.com Inc."
+        ]
+    },
+    "DIA": {
+        "name": "SPDR Dow Jones Industrial Average ETF Trust",
+        "chinese_name": "SPDR 道瓊工業平均指數 ETF",
+        "icon": "icon/SPY.png",
+        "description": "追蹤道瓊工業平均指數，投資於30家大型美國公司。",
+        "sector": "ETF",
+        "industry": "工業指數",
+        "founded": "1998年1月14日",
+        "ipo_date": "1998-01-14",
+        "headquarters": "美國波士頓",
+        "ceo": "Cyrus Taraporevala",
+        "employees": "3,000+",
+        "key_products": [
+            "道瓊斯工業指數追蹤"
+        ],
+        "key_services": [
+            "指數化投資",
+            "被動式管理",
+            "藍籌股投資"
+        ],
+        "category": "大型股",
+        "expense_ratio": "0.16%",
+        "inception_date": "1998-01-29",
+        "issuer": "State Street Global Advisors",
+        "index": "Dow Jones Industrial Average",
+        "holdings": [
+            "UnitedHealth Group Inc.",
+            "Goldman Sachs Group Inc.",
+            "Microsoft Corp."
+        ]
+    },
+    "ARKK": {
+        "name": "ARK Innovation ETF",
+        "chinese_name": "ARK 創新 ETF",
+        "icon": "icon/ARKK.png",
+        "description": "積極管理型ETF，投資於具有顛覆性創新的公司。",
+        "sector": "ETF",
+        "industry": "創新科技",
+        "founded": "2014年10月31日",
+        "ipo_date": "2014-10-31",
+        "headquarters": "美國紐約",
+        "ceo": "Cathie Wood",
+        "employees": "100+",
+        "key_products": [
+            "創新科技投資組合"
+        ],
+        "key_services": [
+            "主動式管理",
+            "創新投資",
+            "成長型投資"
+        ],
+        "category": "成長型",
+        "expense_ratio": "0.75%",
+        "inception_date": "2014-10-31",
+        "issuer": "ARK Investment Management",
+        "index": "N/A (Actively Managed)",
+        "holdings": [
+            "Tesla Inc.",
+            "Zoom Video Communications",
+            "Roku Inc."
+        ]
+    },
+    "XLF": {
+        "name": "Financial Select Sector SPDR Fund",
+        "chinese_name": "金融類股精選 SPDR 基金",
+        "icon": "icon/SPY.png",
+        "description": "追蹤金融類股，包括銀行、保險和投資公司。",
+        "sector": "ETF",
+        "industry": "金融指數",
+        "founded": "1998年12月16日",
+        "ipo_date": "1998-12-16",
+        "headquarters": "美國波士頓",
+        "ceo": "Cyrus Taraporevala",
+        "employees": "3,000+",
+        "key_products": [
+            "金融業指數追蹤"
+        ],
+        "key_services": [
+            "指數化投資",
+            "被動式管理",
+            "金融股投資"
+        ],
+        "category": "金融股",
+        "expense_ratio": "0.10%",
+        "inception_date": "1998-12-22",
+        "issuer": "State Street Global Advisors",
+        "index": "Financial Select Sector Index",
+        "holdings": [
+            "Berkshire Hathaway Inc.",
+            "JPMorgan Chase & Co.",
+            "Bank of America Corp."
+        ]
+    },
+    "XLV": {
+        "name": "Health Care Select Sector SPDR Fund",
+        "chinese_name": "醫療保健類股精選 SPDR 基金",
+        "icon": "icon/SPY.png",
+        "description": "追蹤醫療保健類股，包括製藥、醫療設備和生物技術公司。",
+        "sector": "ETF",
+        "industry": "醫療保健指數",
+        "founded": "1998年12月16日",
+        "ipo_date": "1998-12-16",
+        "headquarters": "美國波士頓",
+        "ceo": "Cyrus Taraporevala",
+        "employees": "3,000+",
+        "key_products": [
+            "醫療保健指數追蹤"
+        ],
+        "key_services": [
+            "指數化投資",
+            "被動式管理",
+            "醫療股投資"
+        ],
+        "category": "醫療保健股",
+        "expense_ratio": "0.10%",
+        "inception_date": "1998-12-22",
+        "issuer": "State Street Global Advisors",
+        "index": "Health Care Select Sector Index",
+        "holdings": [
+            "UnitedHealth Group Inc.",
+            "Johnson & Johnson",
+            "Eli Lilly and Co."
+        ]
+    },
+    "XLE": {
+        "name": "Energy Select Sector SPDR Fund",
+        "chinese_name": "能源類股精選 SPDR 基金",
+        "icon": "icon/SPY.png",
+        "description": "追蹤能源類股，包括石油、天然氣和可再生能源公司。",
+        "sector": "ETF",
+        "industry": "能源指數",
+        "founded": "1998年12月16日",
+        "ipo_date": "1998-12-16",
+        "headquarters": "美國波士頓",
+        "ceo": "Cyrus Taraporevala",
+        "employees": "3,000+",
+        "key_products": [
+            "能源業指數追蹤"
+        ],
+        "key_services": [
+            "指數化投資",
+            "被動式管理",
+            "能源股投資"
+        ],
+        "category": "能源股",
+        "expense_ratio": "0.10%",
+        "inception_date": "1998-12-22",
+        "issuer": "State Street Global Advisors",
+        "index": "Energy Select Sector Index",
+        "holdings": [
+            "Exxon Mobil Corp.",
+            "Chevron Corp.",
+            "ConocoPhillips"
+        ]
+    },
+    "IWM": {
+        "name": "iShares Russell 2000 ETF",
+        "chinese_name": "iShares 羅素2000 ETF",
+        "icon": "icon/IWM.png",
+        "description": "追蹤羅素2000指數，投資於小型股。",
+        "sector": "ETF",
+        "industry": "小型股指數",
+        "founded": "2000年5月22日",
+        "ipo_date": "2000-05-22",
+        "headquarters": "美國紐約",
+        "ceo": "Larry Fink",
+        "employees": "19,900+",
+        "key_products": [
+            "小型股指數追蹤"
+        ],
+        "key_services": [
+            "指數化投資",
+            "被動式管理",
+            "小型股投資"
+        ],
+        "category": "小型股",
+        "expense_ratio": "0.19%",
+        "inception_date": "2000-05-22",
+        "issuer": "BlackRock",
+        "index": "Russell 2000 Index",
+        "holdings": [
+            "TransMedics Group Inc.",
+            "Super Micro Computer Inc.",
+            "ACM Research, Inc."
+        ]
+    },
+    "VWO": {
+        "name": "Vanguard FTSE Emerging Markets ETF",
+        "chinese_name": "Vanguard FTSE新興市場ETF",
+        "icon": "icon/VWO.png",
+        "description": "追蹤FTSE Emerging Markets All Cap China A Inclusion Index，投資於新興市場股票。",
+        "sector": "ETF",
+        "industry": "新興市場指數",
+        "founded": "2005年3月4日",
+        "ipo_date": "2005-03-04",
+        "headquarters": "美國賓夕法尼亞州",
+        "ceo": "Tim Buckley",
+        "employees": "17,600+",
+        "key_products": [
+            "新興市場指數追蹤"
+        ],
+        "key_services": [
+            "指數化投資",
+            "被動式管理",
+            "新興市場投資"
+        ],
+        "category": "新興市場",
+        "expense_ratio": "0.08%",
+        "inception_date": "2005-03-04",
+        "issuer": "Vanguard",
+        "index": "FTSE Emerging Markets All Cap China A Inclusion Index",
+        "holdings": [
+            "Taiwan Semiconductor Manufacturing Co Ltd",
+            "Tencent Holdings Ltd",
+            "Alibaba Group Holding Ltd"
+        ]
+    }
+}
