@@ -6,6 +6,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="HwA5PxA4OF8p3WzhegXPctWAd-YL_Pqu02FJI_0C3g4" />
+    <script>
+    // 1. 取得使用者的裝置/瀏覽器資訊 (User-Agent)
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // 2. 判斷是否為 LINE 的內建瀏覽器 (LINE 的 User-Agent 會包含 "Line")
+    var isLineApp = (userAgent.indexOf("Line") > -1 || userAgent.indexOf("LINE") > -1);
+
+    // 3. 檢查目前網址是否「已經」包含了跳轉參數，避免陷入無限重新整理的迴圈
+    var currentUrl = window.location.href;
+    var hasJumpParam = currentUrl.indexOf("openExternalBrowser=1") > -1;
+
+    // 4. 如果是 LINE 瀏覽器，而且還沒有跳轉參數，就執行自動跳轉
+    if (isLineApp && !hasJumpParam) {
+        // 判斷原網址是否已經有其他參數 (是否已經有 '?')
+        var separator = (currentUrl.indexOf("?") > -1) ? "&" : "?";
+        
+        // 組裝新的網址並重新導向
+        var newUrl = currentUrl + separator + "openExternalBrowser=1";
+        window.location.href = newUrl;
+    }
+</script>
     <title>高中自主學習：RAY美股定期定額投資回測試算</title>
     <meta name="description"
         content="這是一款簡單易用美股定期定額回測試算工具，幫助投資者分析美股與 ETF 的定期定額投資策略。透過 Yahoo Finance 數據，計算投資報酬率與風險指標，提供清晰的回測結果，助你做出更聰明的投資決策！">
