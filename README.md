@@ -1,5 +1,5 @@
 # RAY DCA - 高中自主學習作品
-網頁連結：<https://ray0807chen.github.io/ray_dca/>
+網頁連結：<https://ray0807chen.github.io/ray_dca/> 或是 <https://raytaiwan.qzz.io/>
 
 這是一個美股投資回測網站，用於分析定期定額（DCA）與單筆投入（All-in）的歷史績效。
 由 RAY 開發，作為高中自主學習成果展示。
