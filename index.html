@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="HwA5PxA4OF8p3WzhegXPctWAd-YL_Pqu02FJI_0C3g4" />
+    <script>
+    // 1. 取得使用者的裝置/瀏覽器資訊 (User-Agent)
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // 2. 判斷是否為 LINE 的內建瀏覽器 (LINE 的 User-Agent 會包含 "Line")
+    var isLineApp = (userAgent.indexOf("Line") > -1 || userAgent.indexOf("LINE") > -1);
+
+    // 3. 檢查目前網址是否「已經」包含了跳轉參數，避免陷入無限重新整理的迴圈
+    var currentUrl = window.location.href;
+    var hasJumpParam = currentUrl.indexOf("openExternalBrowser=1") > -1;
+
+    // 4. 如果是 LINE 瀏覽器，而且還沒有跳轉參數，就執行自動跳轉
+    if (isLineApp && !hasJumpParam) {
+        // 判斷原網址是否已經有其他參數 (是否已經有 '?')
+        var separator = (currentUrl.indexOf("?") > -1) ? "&" : "?";
+        
+        // 組裝新的網址並重新導向
+        var newUrl = currentUrl + separator + "openExternalBrowser=1";
+        window.location.href = newUrl;
+    }
+</script>
+    <title>高中自主學習：RAY美股定期定額投資回測試算</title>
+    <meta name="description"
+        content="這是一款簡單易用美股定期定額回測試算工具，幫助投資者分析美股與 ETF 的定期定額投資策略。透過 Yahoo Finance 數據，計算投資報酬率與風險指標，提供清晰的回測結果，助你做出更聰明的投資決策！">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- 導覽列 -->
+    <!-- 暗幕遡罩 -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav class="navbar navbar-expand-md">
+        <div class="container position-relative">
+            <!-- RAY DCA Logo -->
+            <a class="navbar-brand-logo" href="index.html">RAY DCA</a>
+
+            <!-- 自訂漢堡按鈕 -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="選單">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">關於我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pk.html">績效 PK</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主頁面 -->
+    <div id="mainPage">
+        <header>
+            <h1>高中自主學習：RAY美股定期定額投資回測</h1>
+            <p class="description">這是一個幫助您分析美股定期定額投資策略的工具</p>
+            <ul class="features-list">
+                <li>
+                    <div>
+                        <strong>50支優質美股 &amp; ETF</strong>
+                        <p>涵蓋科技、金融、能源、還款等主流產業，一鍵切換即可比較任一股票的完整歷史表現。</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>即時數據、每日自動更新</strong>
+                        <p>透過 Yahoo Finance API 每日自動拉取最新收盤價，確保回測結果對應真實市場數據。</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>單一股票定期定額計算</strong>
+                        <p>自訂起始日期、每月金額與投資日，輸出年化報酬、總損益、績效圖表。</p>
+                        <button class="feature-cta-btn" onclick="scrollToSearch()">立即試算</button>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>股票績效 PK</strong>
+                        <p>選兩支股票，以 All-in 或 DCA 模式對決 1～20 年報酬，圖表直視誰遠甩誰。</p>
+                        <a class="feature-cta-btn" href="pk.html">開始對決</a>
+                    </div>
+                </li>
+            </ul>
+
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜尋股票代號、名稱或產業...">
+        </div>
+
+        <div id="stockGrid" class="stock-grid">
+            <!-- 股票卡片將由JavaScript動態生成 -->
+        </div>
+    </div>
+
+    <!-- 回測頁面 -->
+    <div id="backtestPage" class="hidden">
+        <div class="backtest-header">
+            <button class="back-button" onclick="showMainPage()">返回</button>
+            <div>
+                <img id="selectedStockIcon" src="" alt="Stock Icon"
+                    style="width: 48px; height: 48px; border-radius: 50%;">
+                <h2 id="selectedStockName"></h2>
+            </div>
+        </div>
+
+        <div id="selectedStockDescription" class="company-info"></div>
+
+        <div class="backtest-content">
+            <div class="backtest-params">
+                <div class="param-group">
+                    <label>投資期間</label>
+                    <input type="date" id="startDate">
+                    <input type="date" id="endDate">
+                </div>
+                <div class="param-group">
+                    <label>每月投資金額</label>
+                    <input type="number" id="monthlyInvestment" value="1000" min="100" step="100">
+                </div>
+                <div class="param-group">
+                    <label>每月投資日期（可複選，金額將平均分配）</label>
+                    <div class="investment-days">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="investmentDay" value="1"> 1日
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="investmentDay" value="5"> 5日
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="investmentDay" value="10"> 10日
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="investmentDay" value="15"> 15日
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="investmentDay" value="20"> 20日
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="investmentDay" value="25"> 25日
+                        </label>
+                    </div>
+                </div>
+                <div class="param-group">
+                    <label>假日處理方式</label>
+                    <select id="holidayHandling">
+                        <option value="skip">跳過</option>
+                        <option value="next">順延至下一個交易日</option>
+                    </select>
+                </div>
+                <div class="param-group">
+                    <label>手續費率 (%)</label>
+                    <input type="number" id="feeRate" value="0.1" step="0.1" min="0" max="3">
+                </div>
+                <br>
+                <button id="calculateBtn" class="calculate-button"
+                    onclick="calculatePortfolioPerformance()">開始回測</button>
+
+            </div>
+
+            <div id="resultsSection" class="hidden">
+                <div class="results-grid">
+                    <div class="result-item">
+                        <label>總投資金額</label>
+                        <span id="totalInvestment">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <label>目前價值</label>
+                        <span id="currentValue">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <label>總損益</label>
+                        <span id="totalProfitLoss">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <label>總報酬率</label>
+                        <span id="totalReturn">0%</span>
+                    </div>
+                    <div class="result-item">
+                        <label>年化報酬率</label>
+                        <span id="annualReturn">0%</span>
+                    </div>
+                    <div class="result-item">
+                        <label>總手續費</label>
+                        <span id="totalFees">$0</span>
+                    </div>
+                </div>
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <p>© 2026 RAY 投資回測 | <a href="about.html">關於我</a></p>
+                    <p><a href="disclaimer.html" target="_blank">免責聲明&使用條款</a></p>
+                </div>
+                <div class="col-md-8">
+                    <form action="https://formspree.io/f/xqapdeok" method="POST" class="stock-request-form">
+                        <div class="input-group">
+                            <input type="text" name="stock" class="form-control" placeholder="輸入希望此網站新增的股票名稱" required>
+                            <button type="submit" class="btn btn-accent">送出</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // 自訂漢堡選單控制
+        (function () {
+            const btn = document.getElementById('hamburgerBtn');
+            const menu = document.getElementById('navbarNav');
+            const overlay = document.getElementById('navOverlay');
+
+            function openMenu() {
+                btn.classList.add('open');
+                menu.classList.add('show');
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                btn.classList.remove('open');
+                menu.classList.remove('show');
+                overlay.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+
+            btn.addEventListener('click', () => {
+                btn.classList.contains('open') ? closeMenu() : openMenu();
+            });
+
+            overlay.addEventListener('click', closeMenu);
+
+            // 點擊連結自動關閉
+            menu.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        })();
+
+        // 滾到搜尋欄（貼齊導覽列下方）
+        function scrollToSearch() {
+            const el = document.getElementById('searchInput');
+            if (!el) return;
+            const navH = document.querySelector('.navbar')?.offsetHeight || 52;
+            const top = el.getBoundingClientRect().top + window.scrollY - navH - 8;
+            window.scrollTo({ top, behavior: 'smooth' });
+            setTimeout(() => el.focus(), 500);
+        }
+    </script>
+
+</body>
+
+</html>
