@@ -152,13 +152,14 @@ function initializeDateRange() {
 
 // 返回主頁面
 function showMainPage() {
-    document.getElementById('mainPage').style.display = 'block';
-    document.getElementById('backtestPage').style.display = 'none';
-    selectedStock = null;
-
-    // 重置所有績效指標
-    resetResults();
+    // 強制重新整理並回到最外層 (或是清掉 query string 及 hash)，這樣最不會有殘留
+    window.location.href = window.location.pathname;
 }
+
+// 監聽上一頁 (不論哪種狀態變化)
+window.addEventListener('popstate', function () {
+    window.location.reload();
+});
 
 // 重置績效指標
 function resetResults() {
@@ -311,6 +312,11 @@ async function selectStock(symbol) {
 
         mainPage.style.display = 'none';
         backtestPage.style.display = 'block';
+
+
+        if (arguments.length < 2 || !arguments[1]) {
+            history.pushState({ page: 'backtest' }, '', '');
+        }
 
     } catch (error) {
         console.error('選擇股票時發生錯誤:', error);
