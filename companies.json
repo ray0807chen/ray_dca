@@ -858,6 +858,54 @@
             "Experience Cloud"
         ]
     },
+    "MSTR": {
+        "name": "MicroStrategy Incorporated",
+        "chinese_name": "微策略",
+        "icon": "icon/MSTR.png",
+        "description": "一家提供企業商業智能、應用軟體及雲端解決方案的科技公司，同時也是全球持有最多比特幣的上市企業之一。",
+        "sector": "科技",
+        "industry": "軟體—基礎設施",
+        "founded": "1989年",
+        "ipo_date": "1998-06-11",
+        "headquarters": "維吉尼亞州泰森斯",
+        "ceo": "Phong Le",
+        "employees": "2,000+",
+        "key_products": [
+            "MicroStrategy ONE",
+            "Enterprise Analytics",
+            "Bitcoin"
+        ],
+        "key_services": [
+            "Cloud Intelligence",
+            "Consulting Services",
+            "Education Services"
+        ]
+    },
+    "AMD": {
+        "name": "Advanced Micro Devices, Inc.",
+        "chinese_name": "超微半導體",
+        "icon": "icon/AMD.png",
+        "description": "一家全球領先的半導體公司，專門開發用於數據中心、商業和消費市場的電腦處理器、圖形處理器（GPU）及相關技術。",
+        "sector": "科技",
+        "industry": "半導體",
+        "founded": "1969年",
+        "ipo_date": "1972-09-27",
+        "headquarters": "加利福尼亞州聖塔克拉拉",
+        "ceo": "Lisa Su",
+        "employees": "26,000+",
+        "key_products": [
+            "Ryzen Processors",
+            "Radeon Graphics",
+            "EPYC Processors",
+            "Instinct Accelerators"
+        ],
+        "key_services": [
+            "Data Center Solutions",
+            "Gaming Solutions",
+            "Embedded Solutions",
+            "Custom Silicon"
+        ]
+    },
     "SPY": {
         "name": "SPDR S&P 500 ETF Trust",
         "chinese_name": "SPDR 標普500 指數 ETF",
