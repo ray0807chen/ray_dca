@@ -284,6 +284,73 @@
             opacity: 0.7;
         }
 
+        /* Checkmark Animation */
+        .checkmark__circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: var(--accent-color);
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+
+        .checkmark {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: #1e2240;
+            stroke-miterlimit: 10;
+            margin: 10% auto;
+            box-shadow: inset 0px 0px 0px var(--accent-color);
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        }
+
+        .checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes scale {
+
+            0%,
+            100% {
+                transform: none;
+            }
+
+            50% {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0px 0px 0px 30px var(--accent-color);
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @media (max-width: 600px) {
             .profile-card {
                 flex-direction: column;
@@ -478,6 +545,53 @@
                 <span class="contact-label">就讀志願</span>
                 <span class="contact-value" style="color: var(--accent-color); font-weight:600;">經濟系、財務金融系</span>
             </div>
+
+            <hr style="border-color: rgba(201, 168, 76, 0.2); margin: 2rem 0;">
+
+            <div class="section-title" id="contact-form">
+                留言與建議 / 許願新增股票
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                有任何網頁建議、希望新增的股票，或是單純想隨意跟我聊天，都可以透過下方表單傳送給我！
+            </p>
+            <form id="contactForm" action="https://formspree.io/f/mjgayrbp" method="POST">
+                <div class="field-group">
+                    <div class="field-label">您的 Email (必填)</div>
+                    <input type="email" name="email" class="fill-field" placeholder="請輸入您的電子信箱" required>
+                </div>
+                <div class="field-group">
+                    <div class="field-label">主旨選項</div>
+                    <select name="subject" class="fill-field" style="appearance: auto; cursor: pointer;">
+                        <option value="網頁建議">網頁建議</option>
+                        <option value="許願新增股票">許願新增股票</option>
+                        <option value="隨意聊天">隨意聊天</option>
+                        <option value="其他問題">其他</option>
+                    </select>
+                </div>
+                <div class="field-group">
+                    <div class="field-label">留言內容 (必填)</div>
+                    <textarea name="message" class="fill-field" rows="4" placeholder="請輸入您的留言、建議或希望新增的股票名稱..."
+                        required></textarea>
+                </div>
+                <div class="field-group" style="text-align: right; margin-top: 1.5rem;">
+                    <button type="submit" class="btn btn-accent"
+                        style="padding: 0.6rem 2rem; border-radius: 5px; border: none; font-weight: 600;">送出留言</button>
+                </div>
+            </form>
+
+            <!-- 成功動畫容器 -->
+            <div id="successAnimation" style="display: none; text-align: center; padding: 2rem 0;">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+                <h4
+                    style="color: var(--accent-color); margin-top: 1rem; opacity: 0; animation: fadeInText 0.5s 0.3s forwards;">
+                    傳送成功！</h4>
+                <p
+                    style="color: var(--text-muted); font-size: 0.9rem; opacity: 0; animation: fadeInText 0.5s 0.6s forwards;">
+                    感謝您的留言與建議，我會盡快回覆您。</p>
+            </div>
         </div>
 
 
@@ -530,6 +644,39 @@
                 link.addEventListener('click', closeMenu);
             });
         })();
+
+        // AJAX Form Submission
+        document.getElementById('contactForm')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const form = this;
+            const formData = new FormData(form);
+            const action = form.getAttribute('action');
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = '傳送中...';
+
+            fetch(action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = 'none';
+                    document.getElementById('successAnimation').style.display = 'block';
+                } else {
+                    alert('發生錯誤，請稍後再試。');
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = '送出留言';
+                }
+            }).catch(error => {
+                alert('發生錯誤，請稍後再試。');
+                submitBtn.disabled = false;
+                submitBtn.innerText = '送出留言';
+            });
+        });
     </script>
 
 </body>
