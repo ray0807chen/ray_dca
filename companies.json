@@ -906,6 +906,141 @@
             "Custom Silicon"
         ]
     },
+    "UBER": {
+        "name": "Uber Technologies, Inc.",
+        "chinese_name": "優步",
+        "icon": "icon/UBER.png",
+        "description": "全球最大的共乘與共享經濟平台，提供叫車、餐飲外送及貨運服務，極度仰賴大數據與演算法來優化派單與動態定價。",
+        "sector": "工業",
+        "industry": "客運與物流",
+        "founded": "2009年3月",
+        "ipo_date": "2019-05-10",
+        "headquarters": "加利福尼亞州舊金山",
+        "ceo": "Dara Khosrowshahi",
+        "employees": "32,800+",
+        "key_products": [
+            "Uber Rides",
+            "Uber Eats",
+            "Uber Freight"
+        ],
+        "key_services": [
+            "共乘服務",
+            "餐飲外送",
+            "物流運輸"
+        ]
+    },
+    "QCOM": {
+        "name": "QUALCOMM Incorporated",
+        "chinese_name": "高通",
+        "icon": "icon/QCOM.png",
+        "description": "美國領先的無線通訊技術與晶片設計巨頭，在 5G 技術、智慧型手機處理器與物聯網領域具有統治地位。",
+        "sector": "科技",
+        "industry": "半導體",
+        "founded": "1985年7月",
+        "ipo_date": "1991-12-13",
+        "headquarters": "加利福尼亞州聖地亞哥",
+        "ceo": "Cristiano Amon",
+        "employees": "51,000+",
+        "key_products": [
+            "Snapdragon 處理器",
+            "5G 數據機晶片",
+            "射頻前端模組"
+        ],
+        "key_services": [
+            "技術專利授權",
+            "無線通訊解決方案"
+        ]
+    },
+    "COST": {
+        "name": "Costco Wholesale Corporation",
+        "chinese_name": "好市多",
+        "icon": "icon/COST.png",
+        "description": "美國最大的會員制倉儲批發俱樂部，以高性價比的商品與超高顧客忠誠度聞名，營運模式與股價表現極具防禦性。",
+        "sector": "消費者服務",
+        "industry": "零售",
+        "founded": "1983年9月15日",
+        "ipo_date": "1985-12-05",
+        "headquarters": "華盛頓州伊薩誇",
+        "ceo": "Ron Vachris",
+        "employees": "316,000+",
+        "key_products": [
+            "Kirkland Signature 自有品牌",
+            "生鮮食品",
+            "電子產品"
+        ],
+        "key_services": [
+            "會員制零售",
+            "好市多加油站",
+            "藥局與光學服務"
+        ]
+    },
+    "TTWO": {
+        "name": "Take-Two Interactive Software, Inc.",
+        "chinese_name": "Take-Two 互動軟體",
+        "icon": "icon/TTWO.png",
+        "description": "美國頂級的遊戲開發與發行商，旗下擁有《俠盜獵車手》(GTA)、《碧血狂殺》及《NBA 2K》等現象級大作。非常適合用來訓練模型捕捉大作發售對市場情緒的影響。",
+        "sector": "通訊服務",
+        "industry": "電子遊戲",
+        "founded": "1993年9月30日",
+        "ipo_date": "1997-04-15",
+        "headquarters": "紐約州紐約市",
+        "ceo": "Strauss Zelnick",
+        "employees": "11,500+",
+        "key_products": [
+            "Grand Theft Auto",
+            "Red Dead Redemption",
+            "NBA 2K"
+        ],
+        "key_services": [
+            "遊戲開發與發行",
+            "遊戲內微交易服務"
+        ]
+    },
+    "PLNT": {
+        "name": "Planet Fitness, Inc.",
+        "chinese_name": "星球健身",
+        "icon": "icon/PLNT.png",
+        "description": "美國最大的連鎖健身房之一，主打平價與大眾市場。其營收與股價波動能很好地反映美國本土市場對於運動健身消費的趨勢。",
+        "sector": "消費者服務",
+        "industry": "休閒設施",
+        "founded": "1992年",
+        "ipo_date": "2015-08-06",
+        "headquarters": "新罕布夏州漢普頓",
+        "ceo": "Craig Benson",
+        "employees": "3,000+",
+        "key_products": [
+            "健身房會籍",
+            "黑卡會員 (Black Card)"
+        ],
+        "key_services": [
+            "實體健身設備",
+            "健身指導",
+            "線上健身課程"
+        ]
+    },
+    "BAC": {
+        "name": "Bank of America Corporation",
+        "chinese_name": "美國銀行",
+        "icon": "icon/BAC.png",
+        "description": "美國規模最大的金融機構之一，提供全面的銀行、投資、資產管理及其他金融服務，其股價是觀察美國總體經濟與利率環境的絕佳指標。",
+        "sector": "金融",
+        "industry": "銀行",
+        "founded": "1998年 (合併成立)",
+        "ipo_date": "1973-01-02",
+        "headquarters": "北卡羅來納州夏洛特",
+        "ceo": "Brian Moynihan",
+        "employees": "213,000+",
+        "key_products": [
+            "消費金融帳戶",
+            "信用卡",
+            "抵押貸款"
+        ],
+        "key_services": [
+            "財富管理 (Merrill)",
+            "投資銀行",
+            "企業銀行服務"
+        ]
+    },
     "SPY": {
         "name": "SPDR S&P 500 ETF Trust",
         "chinese_name": "SPDR 標普500 指數 ETF",
