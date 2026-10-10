@@ -1,0 +1,82 @@
+{
+  "AAPL": {
+    "name": "AAPL",
+    "ipo_date": "1980-12-12"
+  },
+  "MSFT": {
+    "name": "MSFT",
+    "ipo_date": "1986-03-13"
+  },
+  "GOOGL": {
+    "name": "GOOGL",
+    "ipo_date": "2004-08-19"
+  },
+  "AMZN": {
+    "name": "AMZN",
+    "ipo_date": "1997-05-15"
+  },
+  "META": {
+    "name": "META",
+    "ipo_date": "2012-05-18"
+  },
+  "NVDA": {
+    "name": "NVDA",
+    "ipo_date": "1999-01-22"
+  },
+  "TSLA": {
+    "name": "TSLA",
+    "ipo_date": "2010-06-29"
+  },
+  "JPM": {
+    "name": "JPM",
+    "ipo_date": "1969-12-24"
+  },
+  "V": {
+    "name": "V",
+    "ipo_date": "2008-03-19"
+  },
+  "WMT": {
+    "name": "WMT",
+    "ipo_date": "1972-08-25"
+  },
+  "PG": {
+    "name": "PG",
+    "ipo_date": "1978-01-03"
+  },
+  "JNJ": {
+    "name": "JNJ",
+    "ipo_date": "1944-09-24"
+  },
+  "KO": {
+    "name": "KO",
+    "ipo_date": "1919-09-05"
+  },
+  "PFE": {
+    "name": "PFE",
+    "ipo_date": "1942-06-22"
+  },
+  "BAC": {
+    "name": "BAC",
+    "ipo_date": "1998-11-02"
+  },
+  "HD": {
+    "name": "HD",
+    "ipo_date": "1981-09-22"
+  },
+  "DIS": {
+    "name": "DIS",
+    "ipo_date": "1957-11-12"
+  },
+  "NFLX": {
+    "name": "NFLX",
+    "ipo_date": "2002-05-23"
+  },
+  "INTC": {
+    "name": "INTC",
+    "ipo_date": "1971-10-13"
+  },
+  "CSCO": {
+    "name": "CSCO",
+    "ipo_date": "1990-02-16"
+  }
+}
