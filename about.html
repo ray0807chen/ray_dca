@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我 - RAY 的自我介紹</title>
+    <meta name="description" content="RAY 的個人自我介紹頁面，包含學習歷程與投資興趣的簡述。">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* ── About 頁面專屬樣式 ── */
+        .about-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+            animation: fadeIn 0.9s ease-out;
+        }
+
+        /* 頂部個人卡片 */
+        .profile-card {
+            background: linear-gradient(135deg, #1e2240, #2a2f5a);
+            border: 1px solid rgba(201, 168, 76, 0.4);
+            border-radius: 24px;
+            padding: 2.5rem 3rem;
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(201, 168, 76, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.12), transparent 70%);
+            border-radius: 50%;
+        }
+
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid rgba(201, 168, 76, 0.6);
+            background: linear-gradient(135deg, #2a2f5a, #1e2240);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 20px rgba(201, 168, 76, 0.2);
+        }
+
+        .profile-info h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #e8c56e, #f0e6c8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.4rem;
+        }
+
+        .profile-info .subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .profile-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(201, 168, 76, 0.15);
+            border: 1px solid rgba(201, 168, 76, 0.35);
+            color: #e8c56e;
+            border-radius: 50px;
+            padding: 0.2rem 0.85rem;
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+
+        /* 各區塊卡片 */
+        .section-card {
+            background: #1e2240;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: 20px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 1.8rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .section-card:hover {
+            border-color: rgba(201, 168, 76, 0.5);
+            box-shadow: 0 8px 24px rgba(201, 168, 76, 0.08);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 1.4rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+        }
+
+        .section-title .icon {
+            font-size: 1.4rem;
+        }
+
+        /* 輸入欄位外觀 */
+        .fill-field {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: 10px;
+            color: var(--text-color);
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            font-family: inherit;
+            resize: vertical;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            line-height: 1.7;
+        }
+
+        .fill-field:focus {
+            outline: none;
+            border-color: rgba(201, 168, 76, 0.6);
+            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+        }
+
+        .fill-field::placeholder {
+            color: rgba(200, 189, 162, 0.4);
+            font-style: italic;
+        }
+
+        .field-label {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .field-group {
+            margin-bottom: 1.4rem;
+        }
+
+        .field-group:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 技能/興趣標籤列 */
+        .skill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.5rem;
+        }
+
+        .skill-badge {
+            background: rgba(201, 168, 76, 0.12);
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            color: #e8c56e;
+            border-radius: 8px;
+            padding: 0.4rem 1rem;
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        /* 網站作品卡 */
+        .project-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(201, 168, 76, 0.18);
+            border-radius: 14px;
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-card:hover {
+            border-color: rgba(201, 168, 76, 0.5);
+            background: rgba(201, 168, 76, 0.07);
+            color: inherit;
+            transform: translateX(4px);
+        }
+
+        .project-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .project-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.2rem;
+        }
+
+        .project-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* 聯絡資訊 */
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .contact-row:last-child {
+            border-bottom: none;
+        }
+
+        .contact-label {
+            width: 90px;
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .contact-value {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* 引言 */
+        .motto-box {
+            background: linear-gradient(135deg, rgba(201, 168, 76, 0.12), rgba(201, 168, 76, 0.05));
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .motto-box textarea {
+            background: transparent;
+            border: none;
+            color: var(--text-color);
+            font-size: 1rem;
+            font-style: italic;
+            line-height: 1.8;
+            width: 100%;
+            resize: none;
+            font-family: inherit;
+        }
+
+        .motto-box textarea:focus {
+            outline: none;
+        }
+
+        .motto-box textarea::placeholder {
+            color: rgba(200, 189, 162, 0.4);
+        }
+
+        /* 儲存提示 */
+        .save-notice {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            margin-top: 2rem;
+            opacity: 0.7;
+        }
+
+        /* Checkmark Animation */
+        .checkmark__circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: var(--accent-color);
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+
+        .checkmark {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: #1e2240;
+            stroke-miterlimit: 10;
+            margin: 10% auto;
+            box-shadow: inset 0px 0px 0px var(--accent-color);
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        }
+
+        .checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes scale {
+
+            0%,
+            100% {
+                transform: none;
+            }
+
+            50% {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0px 0px 0px 30px var(--accent-color);
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .profile-tags {
+                justify-content: center;
+            }
+
+            .section-card {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <!-- 暗幕遡罩 -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav class="navbar navbar-expand-md">
+        <div class="container position-relative">
+            <!-- RAY DCA Logo -->
+            <a class="navbar-brand-logo" href="index.html">RAY DCA</a>
+
+            <!-- 自訂漢堡按鈕 -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="選單">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">關於我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pk.html">績效 PK</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="about-wrapper">
+
+        <!-- 個人名片 -->
+        <div class="profile-card">
+            <img src="ray.jpg" alt="RAY" style="width: 100px; height: 100px; border-radius: 50%;">
+            <div class="profile-info">
+                <h2>陳品叡</h2>
+                <p class="subtitle">
+                    對經濟與投資充滿熱情的高中生，並將此興趣實踐於自主學習中。
+                </p>
+                <div class="profile-tags">
+                    <span class="tag">投資分析</span>
+                    <span class="tag">美股研究</span>
+                    <span class="tag">志願：經濟系、財務金融系</span>
+                    <span class="tag">自主學習</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 自我介紹 -->
+        <div class="section-card">
+            <div class="section-title">
+                自我介紹
+            </div>
+            <div class="field-group">
+                <!-- 自我介紹 -->
+                <p class="about-text">
+                    我是一名高中生，對經濟與投資充滿熱情。我熱衷於學習和研究投資策略，特別是定期定額投資。我希望能透過這個網站，分享我的學習經驗和研究成果，並與大家交流，共同成長。
+                </p>
+            </div>
+            <div class="field-group">
+                <div class="section-title" style="font-size:1rem; margin-bottom:0.8rem; padding-bottom:0.5rem;">
+                    座右銘 / 人生理念
+                </div>
+                <div class="motto-box">
+                    <!-- 在下方填入你的座右銘 -->
+                    <p class="motto-text">• 如果你不願意擁有一隻股票十年，那就不要考慮擁有它十分鐘。</p>
+                    <p class="motto-text">• 想成為最優秀的人，就要向最優秀的人學習。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 學習歷程 -->
+        <div class="section-card">
+            <div class="section-title">
+                學習歷程
+            </div>
+            <div class="field-group">
+                <!-- 學校與年級 -->
+                <p class="about-text school-text">桃園高中　高三</p>
+            </div>
+            <div class="field-group">
+                <!-- 與經濟相關的學習經歷：課程、閱讀、活動等，可用 <br> 換行 -->
+                <p class="about-text">
+                    • 參與2024全國大專院校暨高中職虛擬投資競賽<br>
+                    • 參與ETF模擬交易競賽<br>
+                    • 銀行內控考試
+                </p>
+            </div>
+            <div class="field-group" style="margin-bottom:0">
+                <!-- 對經濟系的期待與目標 -->
+                <p class="about-text">
+
+                </p>
+            </div>
+        </div>
+
+        <!-- 這個作品：投資回測網站 -->
+        <div class="section-card">
+            <div class="section-title">
+                學習成果：美股投資回測網站
+            </div>
+            <a class="project-card" href="index.html">
+                <span class="project-icon"></span>
+                <div>
+                    <h4>RAY美股定期定額投資回測試算</h4>
+                    <p>使用 HTML、CSS、JavaScript、python 打造的投資回測工具，整合 Yahoo Finance 數據，可模擬50支美股的定期定額投資績效。</p>
+                </div>
+            </a>
+            <div class="field-group" style="margin-top:1.2rem; margin-bottom:0">
+                <!-- 製作這個網站的動機與過程 -->
+                <p class="about-text">
+                    在學習投資知識後，我發現市面上缺乏簡單易懂的中文回測工具，因此決定自己動手做。這個過程讓我學到了如何使用Yahoo Finance API來獲取股票數據，以及如何使用python來爬蟲。
+                </p>
+            </div>
+            <div class="field-group">
+                <div class="field-label">技術與工具</div>
+                <div class="skill-row">
+                    <span class="skill-badge">HTML / CSS</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">Yahoo Finance API</span>
+                    <span class="skill-badge">Chart.js</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">GitHub actions</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 興趣與專長 -->
+        <div class="section-card">
+            <div class="section-title">
+                興趣與專長
+            </div>
+            <div class="field-group">
+                <!-- skill-->
+                <div class="skill-row">
+                    <span class="skill-badge">投資理財</span>
+                    <span class="skill-badge">程式設計</span>
+                    <span class="skill-badge">財經時事</span>
+                    <span class="skill-badge">分析公司財報</span>
+                    <span class="skill-badge">邏輯推理</span>
+                    <span class="skill-badge">方法優化</span>
+                </div>
+            </div>
+            <div class="field-group" style="margin-bottom:0">
+                <!-- 其他補充 -->
+                <p class="about-text">
+                    我擅長以數據與邏輯為基礎思考問題，對經濟現象與市場變化很敏銳，能將不同指標與資訊整合分析。在數學與理科領域中，我重視原理推導與方法選擇，習慣並尋求更有效率的解題方式，而非僅依賴公式套用。同時，
+                    我具備長期規劃與策略思維，面對問題時能保持理性判斷，從多角度分析風險與可能性。整體而言，我的優勢在於邏輯推理能力、數據分析能力，以及跨領域整合思考的能力。
+                </p>
+            </div>
+        </div>
+
+        <!-- 聯絡資訊 -->
+        <div class="section-card">
+            <div class="section-title">
+                聯絡方式
+            </div>
+            <div class="contact-row">
+                <span class="contact-label">Email</span>
+                <!-- 把下方 aa33688537aa@gmail.com 換成你的信箱 -->
+                <span class="contact-value">aa33688537aa@gmail.com</span>
+            </div>
+            <div class="contact-row">
+                <span class="contact-label">學校</span>
+                <!-- 把下方換成你的學校 -->
+                <span class="contact-value">桃園高中</span>
+            </div>
+            <div class="contact-row">
+                <span class="contact-label">就讀志願</span>
+                <span class="contact-value" style="color: var(--accent-color); font-weight:600;">經濟系、財務金融系</span>
+            </div>
+        </div> <!-- 聯絡資訊結束 -->
+
+        <!-- 留言表單區塊獨立 -->
+        <div class="section-card" id="contact-form">
+            <div class="section-title">
+                留言與建議 / 許願新增股票
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                有任何網頁建議、希望新增的股票，或是單純想隨意跟我聊天，都可以透過下方表單傳送給我！
+            </p>
+            <form id="contactForm" action="https://formspree.io/f/mjgayrbp" method="POST">
+                <div class="field-group">
+                    <div class="field-label">您的 Email (必填)</div>
+                    <input type="email" name="email" class="fill-field" placeholder="請輸入您的電子信箱" required>
+                </div>
+                <div class="field-group">
+                    <div class="field-label">主旨選項</div>
+                    <select name="subject" class="fill-field" style="appearance: auto; cursor: pointer;">
+                        <option value="網頁建議">網頁建議</option>
+                        <option value="許願新增股票">許願新增股票</option>
+                        <option value="隨意聊天">隨意聊天</option>
+                        <option value="其他問題">其他</option>
+                    </select>
+                </div>
+                <div class="field-group">
+                    <div class="field-label">留言內容 (必填)</div>
+                    <textarea name="message" class="fill-field" rows="4" placeholder="請輸入您的留言、建議或希望新增的股票名稱..."
+                        required></textarea>
+                </div>
+                <div class="field-group" style="text-align: center; margin-top: 2rem;">
+                    <button type="submit" id="submitBtnStyle"
+                        style="background: linear-gradient(45deg, var(--secondary-color), var(--accent-color)); color: #0f1227; padding: 0.8rem 2.5rem; border-radius: 50px; border: none; font-size: 1rem; font-weight: 700; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(201, 168, 76, 0.2);">
+                        送出留言
+                    </button>
+                </div>
+            </form>
+
+            <!-- 成功動畫容器 -->
+            <div id="successAnimation" style="display: none; text-align: center; padding: 2rem 0;">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+                <h4
+                    style="color: var(--accent-color); margin-top: 1rem; opacity: 0; animation: fadeInText 0.5s 0.3s forwards;">
+                    傳送成功！</h4>
+                <p
+                    style="color: var(--text-muted); font-size: 0.9rem; opacity: 0; animation: fadeInText 0.5s 0.6s forwards;">
+                    感謝您的留言與建議，我會盡快回覆您。</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>© 2026 RAY 投資回測 | 這是 RAY 的自主學習作品</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p><a href="index.html">回到投資回測首頁</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 自訂漢堡選單控制
+        (function () {
+            const btn = document.getElementById('hamburgerBtn');
+            const menu = document.getElementById('navbarNav');
+            const overlay = document.getElementById('navOverlay');
+
+            function openMenu() {
+                btn.classList.add('open');
+                menu.classList.add('show');
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                btn.classList.remove('open');
+                menu.classList.remove('show');
+                overlay.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+
+            btn.addEventListener('click', () => {
+                btn.classList.contains('open') ? closeMenu() : openMenu();
+            });
+
+            overlay.addEventListener('click', closeMenu);
+
+            menu.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        })();
+
+        // AJAX Form Submission
+        document.getElementById('contactForm')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const form = this;
+            const formData = new FormData(form);
+            const action = form.getAttribute('action');
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = '傳送中...';
+
+            fetch(action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = 'none';
+                    document.getElementById('successAnimation').style.display = 'block';
+                } else {
+                    alert('發生錯誤，請稍後再試。');
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = '送出留言';
+                }
+            }).catch(error => {
+                alert('發生錯誤，請稍後再試。');
+                submitBtn.disabled = false;
+                submitBtn.innerText = '送出留言';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
